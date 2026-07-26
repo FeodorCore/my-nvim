@@ -1,0 +1,57 @@
+return {
+	"milanglacier/minuet-ai.nvim",
+	config = function()
+		require("minuet").setup({
+			provider = "openai_fim_compatible",
+			n_completions = 1,
+			--context_window = 512,
+			context_window = 1024,
+			provider_options = {
+				openai_fim_compatible = {
+					api_key = "TERM",
+					name = "Ollama",
+					end_point = "http://localhost:11434/v1/completions",
+					--model = "JetBrains/Mellum-4b-sft-all:latest",
+					model = "JetBrains/mellum2-base-q4_k_m:latest",
+					optional = {
+						--	max_tokens = 56,
+						--	top_p = 0.9,
+						max_tokens = 128,
+						top_p = 0.9,
+					},
+					template = {
+						prompt = function(context_before_cursor, context_after_cursor, _)
+							return "<fim_suffix>"
+								.. context_after_cursor
+								.. "<fim_prefix>"
+								.. context_before_cursor
+								.. "<fim_middle>"
+						end,
+						suffix = false, -- отключаем отдельное поле suffix
+					},
+				},
+			},
+
+			request_timeout = 50,
+			virtualtext = {
+				auto_trigger_ft = {'*'},
+                show_on_completion_menu = true,
+				keymap = {
+					-- accept whole completion
+					accept = "<A-A>",
+					-- accept one line
+					accept_line = "<A-a>",
+					-- accept n lines (prompts for number)
+					-- e.g. "A-z 2 CR" will accept 2 lines
+					accept_n_lines = "<A-z>",
+					-- Cycle to prev completion item, or manually invoke completion
+					prev = "<A-[>",
+					-- Cycle to next completion item, or manually invoke completion
+					next = "<A-]>",
+					dismiss = "<A-e>",
+				},
+			},
+		})
+	end,
+	enabled = false,
+}

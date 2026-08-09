@@ -6,13 +6,9 @@ return {
 				lua = { "stylua" },
 				java = { "google-java-format" },
 				xml = { "xmlformatter" },
-				json = { "jq" },
 				python = { "black" },
 				html = { "prettier" },
 				css = { "prettier" },
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				go = { "gofumpt" },
 			},
 		})
 		vim.api.nvim_create_autocmd("LspAttach", {

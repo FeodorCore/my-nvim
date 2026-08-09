@@ -2,16 +2,13 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	lazy = false,
 	build = ":TSUpdate",
-
 	config = function()
-		require("nvim-treesitter").install({ "lua", "python", "java", "xml", "html", "css", "javascript", "typescript", "go" })
-
+		require("nvim-treesitter").install({ "python", "java", "xml", "html", "css" })
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = { "lua",  "python", "java", "xml", "html", "css", "javascript", "typescript", "go"},
+			pattern = { "python", "java", "xml", "html", "css"},
 			callback = function()
 				vim.treesitter.start()
 			end,
 		})
 	end,
-    enabled = true
 }

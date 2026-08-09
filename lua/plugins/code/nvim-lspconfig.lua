@@ -1,4 +1,21 @@
 return {
+	{
+		"mason-org/mason-lspconfig.nvim",
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"lua_ls",
+					"basedpyright",
+					"jdtls",
+					"lemminx",
+					"html",
+					"cssls",
+				},
+				automatic_enable = false,
+			})
+		end,
+	},
+    {
 	"neovim/nvim-lspconfig",
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -28,16 +45,10 @@ return {
 
 		vim.lsp.enable("basedpyright")
 
-		vim.lsp.enable("vtsls")
-
-        vim.lsp.enable("gopls")
-
-		vim.lsp.enable("jsonls")
-
 		vim.lsp.enable("lemminx")
 
 		vim.lsp.enable("html")
 
 		vim.lsp.enable("cssls")
 	end,
-}
+}}

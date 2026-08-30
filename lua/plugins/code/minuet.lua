@@ -5,7 +5,7 @@ return {
 			provider = "openai_fim_compatible",
 			n_completions = 1,
 			--context_window = 512,
-			context_window = 1024,
+			context_window = 4096,
 			provider_options = {
 				openai_fim_compatible = {
 					api_key = "TERM",
@@ -16,7 +16,7 @@ return {
 					optional = {
 						--	max_tokens = 56,
 						--	top_p = 0.9,
-						max_tokens = 128,
+						max_tokens = 64,
 						top_p = 0.9,
 					},
 					template = {

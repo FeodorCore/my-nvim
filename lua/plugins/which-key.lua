@@ -15,6 +15,10 @@ return {
             {
                 "<leader>c",
                 group = "Trouble more"
+            },
+            {
+                "<leader>d",
+                group = "Debug"
             }
 		})
 	end,

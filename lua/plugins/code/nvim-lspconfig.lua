@@ -33,17 +33,9 @@ return {
 
 		vim.lsp.enable("lua_ls")
 
-		local lombok_path = vim.fn.expand("$HOME/.local/share/nvim/mason/share/jdtls/lombok.jar")
-		vim.lsp.config("jdtls", {
-			cmd = {
-				"jdtls",
-				"--jvm-arg=-javaagent:" .. lombok_path,
-			},
-		})
+		vim.lsp.enable("basedpyright")
 
 		vim.lsp.enable("jdtls")
-
-		vim.lsp.enable("basedpyright")
 
 		vim.lsp.enable("lemminx")
 

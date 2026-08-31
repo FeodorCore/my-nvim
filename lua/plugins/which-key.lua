@@ -8,6 +8,14 @@ return {
 				"<leader>f",
 				group = "Find",
 			},
+            {
+                "<leader>x",
+                group = "Trouble diagnostics"
+            },
+            {
+                "<leader>c",
+                group = "Trouble more"
+            }
 		})
 	end,
 }

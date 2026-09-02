@@ -36,10 +36,18 @@ return {
 					{ name = "luasnip" },
 					--{ name = "minuet", priority = 100 },
 				}, {
-					{ name = "buffer" },
+					{
+						name = "buffer",
+						option = {
+							get_bufnrs = function()
+								return vim.api.nvim_list_bufs()
+							end,
+						},
+					},
 				}),
 				performance = { fetching_timeout = 500 },
 			})
 		end,
 	},
+	{ "hrsh7th/cmp-buffer" },
 }

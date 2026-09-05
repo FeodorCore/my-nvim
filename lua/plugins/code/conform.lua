@@ -9,6 +9,7 @@ return {
 				python = { "black" },
 				html = { "prettier" },
 				css = { "prettier" },
+                php = {"php_cs_fixer"}
 			},
 		})
 		vim.api.nvim_create_autocmd("LspAttach", {

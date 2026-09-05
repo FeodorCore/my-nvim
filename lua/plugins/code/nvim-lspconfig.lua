@@ -10,6 +10,7 @@ return {
 					"lemminx",
 					"html",
 					"cssls",
+                    "phpantom_lsp"
 				},
 				automatic_enable = false,
 			})
@@ -42,5 +43,7 @@ return {
 		vim.lsp.enable("html")
 
 		vim.lsp.enable("cssls")
+
+        vim.lsp.enable("phpantom_lsp")
 	end,
 }}

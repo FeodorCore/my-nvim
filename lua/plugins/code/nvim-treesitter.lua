@@ -3,9 +3,9 @@ return {
 	lazy = false,
 	build = ":TSUpdate",
 	config = function()
-		require("nvim-treesitter").install({ "python", "java", "xml", "html", "css" })
+		require("nvim-treesitter").install({ "python", "java", "xml", "html", "css", "php" })
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = { "python", "java", "xml", "html", "css"},
+			pattern = { "python", "java", "xml", "html", "css", "php"},
 			callback = function()
 				vim.treesitter.start()
 			end,

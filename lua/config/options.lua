@@ -1,8 +1,8 @@
 vim.opt.clipboard = "unnamedplus" -- Use the system clipboard
 
 -- Numbering
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.number = true -- show the absolute number of the current line
+vim.opt.relativenumber = true -- show line numbers relative to the cursor
 
 -- Visual
 vim.opt.termguicolors = true -- enable 24-bit colors (for themes)

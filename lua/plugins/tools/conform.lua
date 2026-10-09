@@ -10,9 +10,10 @@ return {
 				html = { "prettier" },
 				css = { "prettier" },
                 php = {"php_cs_fixer"},
-                cpp = {"clang-format"}, 
+                cpp = {"clang-format"},
 				javascript = { "prettier" },
 				typescript = { "prettier" },
+                markdown = {"prettier"}
 			},
 		})
 		vim.api.nvim_create_autocmd("LspAttach", {

@@ -5,14 +5,22 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
+
 					"basedpyright",
+
 					"jdtls",
 					"lemminx",
+
+					"clangd",
+
 					"html",
 					"cssls",
+					"ts_ls",
 					"phpantom_lsp",
-					"clangd",
-                    "ts_ls"
+
+					--"marksman",
+					"markdown_oxide",
+					"ltex_plus",
 				},
 				automatic_enable = false,
 			})
@@ -38,18 +46,19 @@ return {
 			vim.lsp.enable("basedpyright")
 
 			vim.lsp.enable("jdtls")
-
 			vim.lsp.enable("lemminx")
-
-			vim.lsp.enable("html")
-
-			vim.lsp.enable("cssls")
-
-			vim.lsp.enable("phpantom_lsp")
 
 			vim.lsp.enable("clangd")
 
-            vim.lsp.enable("ts_ls")
+			vim.lsp.enable("html")
+			vim.lsp.enable("cssls")
+			vim.lsp.enable("ts_ls")
+			vim.lsp.enable("phpantom_lsp")
+
+			--vim.lsp.enable("marksman")
+			vim.lsp.enable("markdown_oxide")
+
+            vim.lsp.enable("ltex_plus")
 		end,
 	},
 }

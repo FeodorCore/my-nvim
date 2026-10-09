@@ -1,28 +1,27 @@
--- Общий буфер обмена
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus" -- Use the system clipboard
 
--- Нумерация
+-- Numbering
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Визуал
-vim.opt.termguicolors = true -- включает 24-битные цвета (для тем)
-vim.opt.showmode = false -- не показывать --INSERT-- (нижняя строка и так показывает)
+-- Visual
+vim.opt.termguicolors = true -- enable 24-bit colors (for themes)
 
--- Табуляция и отступы
-vim.opt.tabstop = 4 -- ширина табуляции в символах
-vim.opt.shiftwidth = 4 -- размер отступа при << / >>
-vim.opt.expandtab = true -- использовать пробелы вместо табуляции
-vim.opt.autoindent = true -- автоматический отступ при переходе на новую строку
+vim.opt.showmode = false -- do not show --INSERT--
 
--- Поиск
-vim.opt.ignorecase = true -- игнорировать регистр при поиске
-vim.opt.smartcase = true -- если есть заглавные — искать с учётом регистра
-vim.opt.hlsearch = true -- подсвечивать найденное
-vim.opt.incsearch = true -- поиск по мере ввода
+-- Tabs and indentation
+vim.opt.tabstop = 4 -- tab width in spaces
+vim.opt.shiftwidth = 4 -- indent size for << / >>
+vim.opt.expandtab = true -- use spaces instead of tabs
+vim.opt.autoindent = true -- automatic indent when starting a new line
 
--- Скроллинг и отображение
-vim.opt.scrolloff = 8 -- минимальное число строк сверху/снизу при скролле
-vim.opt.sidescrolloff = 8 -- то же по горизонтали
-vim.opt.wrap = false -- не переносить длинные строки (можно оставить true, если нравится)
+-- Search
+vim.opt.ignorecase = true -- ignore case when searching
+vim.opt.smartcase = true -- if uppercase is present, search case-sensitively
+vim.opt.hlsearch = true -- highlight matches
+vim.opt.incsearch = true -- incremental search as you type
 
+-- Scrolling and display
+vim.opt.scrolloff = 8 -- minimum number of lines above/below when scrolling
+vim.opt.sidescrolloff = 8 -- same horizontally
+vim.opt.wrap = false -- do not wrap long lines (can keep true if you like)

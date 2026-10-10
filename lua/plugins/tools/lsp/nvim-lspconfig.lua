@@ -14,6 +14,7 @@ return {
 					"clangd",
 
 					"html",
+					"emmet_language_server",
 					"cssls",
 					"ts_ls",
 					"phpantom_lsp",
@@ -58,7 +59,8 @@ return {
 			--vim.lsp.enable("marksman")
 			vim.lsp.enable("markdown_oxide")
 
-            vim.lsp.enable("ltex_plus")
+			vim.lsp.enable("ltex_plus")
+            vim.lsp.enable("emmet_language_server")
 		end,
 	},
 }

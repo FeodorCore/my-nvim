@@ -16,12 +16,16 @@ return {
 					"html",
 					"emmet_language_server",
 					"cssls",
-					"ts_ls",
+					"vtsls",
+					"jsonls",
+
 					"phpantom_lsp",
 
-					--"marksman",
 					"markdown_oxide",
+
 					"ltex_plus",
+					"harper_ls",
+					"typos_lsp",
 				},
 				automatic_enable = false,
 			})
@@ -52,15 +56,18 @@ return {
 			vim.lsp.enable("clangd")
 
 			vim.lsp.enable("html")
+			vim.lsp.enable("emmet_language_server")
 			vim.lsp.enable("cssls")
-			vim.lsp.enable("ts_ls")
+			vim.lsp.enable("vtsls")
+			vim.lsp.enable("jsonls")
+
 			vim.lsp.enable("phpantom_lsp")
 
-			--vim.lsp.enable("marksman")
 			vim.lsp.enable("markdown_oxide")
 
 			vim.lsp.enable("ltex_plus")
-            vim.lsp.enable("emmet_language_server")
+			vim.lsp.enable("harper_ls")
+			vim.lsp.enable("typos_lsp")
 		end,
 	},
 }

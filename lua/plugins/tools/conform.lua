@@ -9,11 +9,14 @@ return {
 				python = { "black" },
 				html = { "prettier" },
 				css = { "prettier" },
-                php = {"php_cs_fixer"},
-                cpp = {"clang-format"},
+				php = { "php_cs_fixer" },
+				cpp = { "clang-format" },
 				javascript = { "prettier" },
+				javascriptreact = { "prettier" },
 				typescript = { "prettier" },
-                markdown = {"prettier"}
+				typescriptreact = { "prettier" },
+				markdown = { "prettier" },
+                json = {"prettier"}
 			},
 		})
 		vim.api.nvim_create_autocmd("LspAttach", {

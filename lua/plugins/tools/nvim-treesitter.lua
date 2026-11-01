@@ -13,10 +13,12 @@ return {
 			"cpp",
 			"javascript",
 			"typescript",
-            "markdown"
+            "tsx",
+            "markdown",
+            "json"
 		})
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = { "python", "java", "xml", "html", "css", "php", "cpp", "javascript", "typescript", "markdown" },
+			pattern = { "python", "java", "xml", "html", "css", "php", "cpp", "javascript", "javascriptreact", "typescript", "typescriptreact", "markdown", "json"},
 			callback = function()
 				vim.treesitter.start()
 			end,

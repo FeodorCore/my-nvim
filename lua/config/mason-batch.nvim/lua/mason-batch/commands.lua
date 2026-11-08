@@ -14,15 +14,21 @@ end
 
 local function install_package(payload)
 	local current_plugin = state.config[payload]
+
 	if current_plugin == nil or #current_plugin == 0 then
 		vim.notify(string.format("No packages found for payload: %s", tostring(payload)), vim.log.levels.WARN)
 		return false
 	end
+
 	for _, value in ipairs(current_plugin) do
 		if registry.has_package(value) then
-			local check_install = registry.is_installed(value)
-			if not check_install then
-				local p = registry.get_package(value)
+			--local check_install = registry.is_installed(value)
+			local p = registry.get_package(value)
+			if p:is_installing() then
+				vim.notify(string.format("Package is already installing: %s", value), vim.log.levels.INFO)
+			elseif not p:is_installing() then
+				--	if not check_install then
+				--local p = registry.get_package(value)
 				p:install()
 				vim.notify(string.format("Installing package: %s", value), vim.log.levels.INFO)
 			else

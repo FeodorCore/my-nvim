@@ -11,7 +11,8 @@ return {
 			"google-java-format",
 			"xmlformatter",
 
-			"prettier",
+			--"prettier",
+			"prettierd",
 			"php-cs-fixer",
 			"clang-format",
 		},

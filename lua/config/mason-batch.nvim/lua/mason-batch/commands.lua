@@ -24,15 +24,13 @@ local function install_package(payload)
 		if registry.has_package(value) then
 			--local check_install = registry.is_installed(value)
 			local p = registry.get_package(value)
-			if p:is_installing() then
+			if p:is_installed() then
+				vim.notify(string.format("Package already installed: %s", value), vim.log.levels.DEBUG)
+			elseif p:is_installing() then
 				vim.notify(string.format("Package is already installing: %s", value), vim.log.levels.INFO)
-			elseif not p:is_installing() then
-				--	if not check_install then
-				--local p = registry.get_package(value)
+			else
 				p:install()
 				vim.notify(string.format("Installing package: %s", value), vim.log.levels.INFO)
-			else
-				vim.notify(string.format("Package already installed: %s", value), vim.log.levels.DEBUG)
 			end
 		else
 			vim.notify(string.format("Failed to find package '%s' in the registry", value), vim.log.levels.ERROR)

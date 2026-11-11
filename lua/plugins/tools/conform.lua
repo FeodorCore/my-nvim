@@ -7,16 +7,19 @@ return {
 				java = { "google-java-format" },
 				xml = { "xmlformatter" },
 				python = { "black" },
-				html = { "prettier" },
-				css = { "prettier" },
+				html = { "prettierd" },
+				css = { "prettierd" },
 				php = { "php_cs_fixer" },
 				cpp = { "clang-format" },
-				javascript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescript = { "prettier" },
-				typescriptreact = { "prettier" },
-				markdown = { "prettier" },
-                json = {"prettier"}
+				javascript = { "prettierd" },
+				javascriptreact = { "prettierd" },
+				typescript = { "prettierd" },
+				typescriptreact = { "prettierd" },
+				markdown = { "prettierd" },
+				json = { "prettierd" },
+			},
+			format_on_save = {
+				timeout_ms = 3000,
 			},
 		})
 		vim.api.nvim_create_autocmd("LspAttach", {

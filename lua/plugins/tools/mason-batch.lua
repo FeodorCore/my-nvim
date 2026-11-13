@@ -39,6 +39,7 @@ return {
 			"ltex-ls-plus",
 			"harper-ls",
 			"typos-lsp",
+			"codebook",
 		},
 	},
 }

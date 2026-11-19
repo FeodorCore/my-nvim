@@ -1,36 +1,4 @@
 return {
-	--	{
-	--		"mason-org/mason-lspconfig.nvim",
-	--		config = function()
-	--			require("mason-lspconfig").setup({
-	--				ensure_installed = {
-	--					"lua_ls",
-	--
-	--					"basedpyright",
-	--
-	--					"jdtls",
-	--					"lemminx",
-	--
-	--					"clangd",
-	--
-	--					"html",
-	--					"emmet_language_server",
-	--					"cssls",
-	--					"vtsls",
-	--					"jsonls",
-	--
-	--					"phpantom_lsp",
-	--
-	--					"markdown_oxide",
-	--
-	--					"ltex_plus",
-	--					"harper_ls",
-	--					"typos_lsp",
-	--				},
-	--				automatic_enable = false,
-	--			})
-	--		end,
-	--	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()

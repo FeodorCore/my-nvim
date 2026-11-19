@@ -10,6 +10,7 @@ return {
 				html = { "prettierd" },
 				css = { "prettierd" },
 				php = { "php_cs_fixer" },
+				c = { "clang-format" },
 				cpp = { "clang-format" },
 				javascript = { "prettierd" },
 				javascriptreact = { "prettierd" },
@@ -18,9 +19,9 @@ return {
 				markdown = { "prettierd" },
 				json = { "prettierd" },
 			},
-			format_on_save = {
-				timeout_ms = 3000,
-			},
+			--	format_on_save = {
+			--		timeout_ms = 3000,
+			--	},
 		})
 		vim.api.nvim_create_autocmd("LspAttach", {
 			callback = function(args)

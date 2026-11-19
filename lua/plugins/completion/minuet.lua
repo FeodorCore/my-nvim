@@ -11,13 +11,11 @@ return {
 					api_key = "TERM",
 					name = "Ollama",
 					end_point = "http://localhost:11434/v1/completions",
-					--model = "JetBrains/Mellum-4b-sft-all:latest",
 					model = "JetBrains/mellum2-base-q4_k_m:latest",
 					optional = {
-						--	max_tokens = 56,
-						--	top_p = 0.9,
 						max_tokens = 64,
 						top_p = 0.9,
+						temperature = 0.8,
 					},
 					template = {
 						prompt = function(context_before_cursor, context_after_cursor, _)
@@ -34,8 +32,8 @@ return {
 
 			request_timeout = 50,
 			virtualtext = {
-				auto_trigger_ft = {'*'},
-                show_on_completion_menu = true,
+				auto_trigger_ft = { "*" },
+				show_on_completion_menu = true,
 				keymap = {
 					-- accept whole completion
 					accept = "<A-A>",

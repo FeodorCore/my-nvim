@@ -6,3 +6,4 @@ My Neovim configuration.
 
 ```sh
 git clone https://github.com/FeodorCore/my-nvim ~/.config/nvim
+```

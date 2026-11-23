@@ -11,7 +11,6 @@ return {
 			"google-java-format",
 			"xmlformatter",
 
-			--"prettier",
 			"prettierd",
 			"php-cs-fixer",
 			"clang-format",
@@ -20,6 +19,7 @@ return {
 			"lua-language-server",
 
 			"basedpyright",
+            "tombi",
 
 			"jdtls",
 			"lemminx",
@@ -40,6 +40,9 @@ return {
 			"harper-ls",
 			"typos-lsp",
 			"codebook",
+		},
+		dap = {
+			"codelldb",
 		},
 	},
 }

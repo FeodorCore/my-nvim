@@ -5,6 +5,7 @@ return {
 	config = function()
 		require("nvim-treesitter").install({
 			"python",
+			"toml",
 			"java",
 			"xml",
 			"html",
@@ -21,6 +22,7 @@ return {
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = {
 				"python",
+				"toml",
 				"java",
 				"xml",
 				"html",

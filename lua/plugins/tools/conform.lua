@@ -7,6 +7,7 @@ return {
 				java = { "google-java-format" },
 				xml = { "xmlformatter" },
 				python = { "black" },
+				toml = { "tombi" },
 				html = { "prettierd" },
 				css = { "prettierd" },
 				php = { "php_cs_fixer" },

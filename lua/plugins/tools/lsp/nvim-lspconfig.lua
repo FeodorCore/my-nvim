@@ -17,7 +17,7 @@ return {
 			vim.lsp.enable("lua_ls")
 
 			vim.lsp.enable("basedpyright")
-
+			vim.lsp.enable("tombi")
 			vim.lsp.enable("jdtls")
 			vim.lsp.enable("lemminx")
 

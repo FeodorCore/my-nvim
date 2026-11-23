@@ -1,7 +1,13 @@
-vim.keymap.set("n", "<leader>h", function()
+vim.keymap.set("n", "<leader>vh", function()
+	---@type boolean
 	local current_state = vim.lsp.inlay_hint.is_enabled()
 	vim.lsp.inlay_hint.enable(not current_state)
-end, { desc = "LSP: Toggle Global Inlay Hints" })
+end, { desc = "Toggle LSP Inlay Hints" })
+
+vim.keymap.set("n", "<leader>vw", function()
+	vim.opt.wrap = not vim.opt.wrap:get()
+end, { desc = "Toggle Line Wrap" })
+
 -- moving
 vim.keymap.set("n", "<C-h>", "<C-w>h", { silent = true, desc = "Go to left window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true, desc = "Go to right window" })

@@ -20,6 +20,10 @@ return {
 				"<leader>d",
 				group = "Debug",
 			},
+			{
+				"<leader>v",
+				group = "View",
+			},
 			{ "<leader>t", group = "translator", mode = { "n", "v" } },
 			{ "<leader>tf", group = "floating", mode = { "n", "v" } },
 			{ "<leader>tr", group = "replace", mode = { "n", "v" } },
